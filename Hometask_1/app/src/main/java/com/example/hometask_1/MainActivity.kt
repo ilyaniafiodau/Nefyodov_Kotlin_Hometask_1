@@ -2,6 +2,8 @@ package com.example.hometask_1
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,7 +36,12 @@ class MainActivity : AppCompatActivity() {
             myAdapter.setItems(listOf(1, 2, 3, 4, 5))
         }
         fab.setOnClickListener{
-            myAdapter.addItems(myAdapter.itemCount + 1)
+            if(myAdapter.itemCount < 20) {
+                myAdapter.addItems(myAdapter.itemCount + 1)
+            } else {
+                Toast.makeText(this, R.string.alert, LENGTH_LONG).show()
+            }
+
         }
     }
 

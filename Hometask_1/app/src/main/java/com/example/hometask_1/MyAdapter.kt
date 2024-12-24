@@ -33,7 +33,8 @@ class MyAdapter(): RecyclerView.Adapter<MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(items[position])
+
+            holder.bind(items[position])
 
         if ((position + 1) % 2 == 0) {
             holder.image.setBackgroundColor(-0x9999)

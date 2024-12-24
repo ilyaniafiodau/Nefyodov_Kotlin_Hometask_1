@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hometask_1</string>
+    <string name="alert">Cannot add more than 20 elements</string>
 </resources>
